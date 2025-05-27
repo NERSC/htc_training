@@ -1,0 +1,18 @@
+stdin redirect argument 6
+stdin redirect argument 7
+stdin redirect argument 8
+four colon argument 6
+four colon argument 7
+four colon argument 8
+list product argument 6 6
+list product argument 6 7
+list product argument 6 8
+list product argument 7 6
+list product argument 7 7
+list product argument 7 8
+list product argument 8 6
+list product argument 8 7
+list product argument 8 8
+mixing types and + argument 1 6
+mixing types and + argument 2 7
+mixing types and + argument 3 8

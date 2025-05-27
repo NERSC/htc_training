@@ -1,0 +1,32 @@
+three colon argument 4
+three colon argument 5
+three colon argument 6
+three colon argument 7
+three colon argument 8
+cross combinations 1 a
+cross combinations 1 b
+cross combinations 1 c
+cross combinations 2 a
+cross combinations 2 b
+cross combinations 2 c
+cross combinations 3 a
+cross combinations 3 b
+cross combinations 3 c
+seq pipe argument 4
+seq pipe argument 5
+seq pipe argument 6
+seq pipe argument 7
+seq pipe argument 8
+ls pipe argument blah.txt
+ls pipe argument data
+ls pipe argument example_one_liners.sh
+ls pipe argument expected_output.txt
+ls pipe argument README.md
+ls command substitution argument blah.txt
+ls command substitution argument data
+ls command substitution argument example_one_liners.sh
+ls command substitution argument expected_output.txt
+ls command substitution argument README.md
+Input for task number 1.
+Input for task number 2.
+Input for task number three.

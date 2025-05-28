@@ -26,6 +26,17 @@ manually.
 
 ## More Advanced Task Input
 
+### Lists of File Paths Using Wildcards
+
+A three colon operator can accept linux filename wildcard operators such as \*,
+?, and \[...\]. When doing so, the resulting task list will include any
+paths in the current working directory which fit the wildcard pattern.
+
+    elvis@perlmutter:login31:~/tutorial/htc_training/parallel/02_substitution_modifiers> parallel echo {} ::: data/*.txt
+    data/task_1.txt
+    data/task_two.txt
+    data/tsk-3.txt
+
 ### Multiple Input Lists
 
 In general, the reason to choose colon inputs instead of the others is

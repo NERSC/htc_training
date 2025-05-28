@@ -17,6 +17,20 @@ Run the example for yourself with this command:
 On the NERSC Perlmutter system an either an additional -A flag with your
 project name is needed, or you can set the SBATCH_ACCOUNT environment variable.
 
+## Notes on srun
+
+The presence of srun in many_node_many_task.sh is load-bearing in this example.
+In the default HPC use case, a single MPI application is launching processes
+across every node in the job; it is the role of srun to create the many
+instances of the application, distribute them to the correct nodes, and provide
+the MPI communicator which links them together.
+
+In this demonstration, we are using srun to create multiple GNU parallel
+processes and distribute exactly one to each node. Beyond that, we don't need,
+and simply ignore, the MPI capabilities of srun. Only one level of srun can
+exist in a Slurm workflow, so if the payload application requires MPI then a
+different arrangement of distributing work to different nodes must be used.
+
 ## Modifying for Yourself
 
 Replace the example script with your own application by modifying driver.sh.

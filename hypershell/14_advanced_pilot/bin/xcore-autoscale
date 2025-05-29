@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 JOBS=$(/usr/bin/sacct -n -X -u xcore -s R,PD --name xcore-pilot | wc -l)
-TASKS=$(~/bin/xcore-hs task search --count --remaining)
+TASKS=$(~/bin/xcore-hs list --count --remaining)
 
 HYPERSHELL_SITE=${CLUSTER_SCRATCH:-/tmp}/xcore-pilot
 PROGNAME=$(basename $0)

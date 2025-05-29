@@ -55,14 +55,14 @@ Alternatively, your sbatch command could be given a --nodes=X flag.
 
 ## Demonstration
 
-    warndt@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> sbatch -A nstaff many_node_many_task.sh input.txt 
+    elvis@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> sbatch -A nstaff many_node_many_task.sh input.txt 
     Submitted batch job 39098734
-    warndt@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> sqs
+    elvis@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> sqs
     JOBID            ST USER      NAME          NODES TIME_LIMIT       TIME  SUBMIT_TIME          QOS             START_TIME           FEATURES       NODELIST(REASON
-    39098734         PD warndt    many_node_ma  2          10:00       0:00  2025-05-28T14:46:41  debug           N/A                  cpu            (Priority)     
-    warndt@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> sqs
+    39098734         PD elvis    many_node_ma  2          10:00       0:00  2025-05-28T14:46:41  debug           N/A                  cpu            (Priority)     
+    elvis@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> sqs
     JOBID            ST USER      NAME          NODES TIME_LIMIT       TIME  SUBMIT_TIME          QOS             START_TIME           FEATURES       NODELIST(REASON
-    warndt@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> cat slurm-39098734.out 
+    elvis@perlmutter:login21:~/tutorial/htc_training/parallel/05_many_node_many_task> cat slurm-39098734.out 
     This is the payload script. argument_2 is the argument passed to it. Ran on machine nid006934.
     This is the payload script. argument_4 is the argument passed to it. Ran on machine nid006934.
     This is the payload script. argument_6 is the argument passed to it. Ran on machine nid006934.

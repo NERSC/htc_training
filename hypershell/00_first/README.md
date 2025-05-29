@@ -15,3 +15,4 @@ in a range. In this case the numbers 1 - 4 (see `task.in`).
 The expected output (assuming you've not configured anything yet) is recorded
 in `output.txt`.
 
+Consider using the `--no-db` flag to suppress the warning in this context.

@@ -1,0 +1,5 @@
+ WARNING [hypershell.server] No database configured - automatically disabled
+1
+2
+3
+4

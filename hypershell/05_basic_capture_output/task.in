@@ -1,0 +1,12 @@
+sleep 1 && echo 1  && true
+sleep 1 && echo 2  && true
+sleep 1 && echo 3  && true
+sleep 1 && echo 4  && true
+sleep 1 && echo 5  && true
+sleep 1 && echo 6  && true
+sleep 1 && echo 7  && false
+sleep 1 && echo 8  && true
+sleep 1 && echo 9  && true
+sleep 1 && echo 10 && true
+sleep 1 && echo 11 && true
+sleep 1 && echo 12 && true

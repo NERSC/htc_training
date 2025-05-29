@@ -1,0 +1,12 @@
+#!/bin/zsh
+export HYPERSHELL_CONFIG_FILE=
+export HYPERSHELL_SITE=${CLUSTER_SCRATCH:-/tmp}/xcore-pilot
+export HYPERSHELL_LOGGING_LEVEL=${HYPERSHELL_LOGGING_LEVEL:-info}
+export HYPERSHELL_LOGGING_STYLE=${HYPERSHELL_LOGGING_STYLE:-default}
+export HYPERSHELL_DATABASE_PROVIDER=postgres
+export HYPERSHELL_DATABASE_HOST=postgres.xcore.university.edu
+export HYPERSHELL_DATABASE_USER=postgres-user
+export HYPERSHELL_DATABASE_PASSWORD=`cat ~/.hypershell/db_pass`
+export HYPERSHELL_DATABASE_DATABASE=hypershell
+export HYPERSHELL_DATABASE_SCHEMA=xcore
+exec ~/.local/bin/hs "$@"

@@ -1,0 +1,10 @@
+#!/bin/zsh
+#SBATCH -A xcore -p cpu -q standby -J xcore-pilot
+#SBATCH -N1 -n1 -c48 -t 01:00:00
+#SBATCH -o /dev/null
+#SBATCH --signal B:USR1@300
+export HYPERSHELL_LOGGING_LEVEL=trace
+export HYPERSHELL_LOGGING_STYLE=system
+exec ~/bin/xcore-hs client -N48 -T 60 --capture \
+	--host hs-server.xcore.university.edu -k `cat ~/.hypershell/key` \
+	1>/dev/null 2>>${CLUSTER_SCRATCH:-/tmp}/xcore-pilot/log/hypershell-`date +"%Y%m%d"`.log

@@ -1,0 +1,4 @@
+#!/bin/zsh
+kubectl exec -n xcore -ti \
+	$(kubectl get pods -n xcore -o json | jq -r '.items[].metadata.name' | grep 'hs-server') \
+	-- "${@:-/bin/bash}"

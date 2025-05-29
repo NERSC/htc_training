@@ -1,0 +1,41 @@
+#!/bin/zsh
+
+JOBS=$(/usr/bin/sacct -n -X -u xcore -s R,PD --name xcore-pilot | wc -l)
+TASKS=$(~/bin/xcore-hs task search --count --remaining)
+
+HYPERSHELL_SITE=${CLUSTER_SCRATCH:-/tmp}/xcore-pilot
+PROGNAME=$(basename $0)
+TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')
+
+function log() {
+	echo "$TIMESTAMP [$PROGNAME] $@ (workers: $JOBS, tasks: $TASKS)" >> $HYPERSHELL_SITE/log/autoscale.log
+}
+
+function scale() {
+	sbatch ~/bin/xcore-pilot
+	log "Scaling"
+	exit 0
+}
+
+function no_scale() {
+	log "Not scaling"
+	exit 0
+}
+
+if [ $JOBS -ge 16 ]
+then
+	no_scale
+fi
+
+if [ $JOBS -eq 0 ] && [ $TASKS -gt 0 ]
+then
+	scale
+fi
+
+if [ $(((TASKS / 48) - JOBS)) -lt 1 ]
+then
+	no_scale
+fi
+
+scale
+

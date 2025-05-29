@@ -1,0 +1,2 @@
+#!/bin/zsh
+exec sacct -u xcore -s R,PD --name xcore-pilot

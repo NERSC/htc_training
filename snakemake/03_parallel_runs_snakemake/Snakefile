@@ -1,0 +1,4 @@
+rule make_cool:
+    input: "data/{name}.txt"
+    output: "output/cool_{name}.txt"
+    shell: "echo xXxXx $(cat data/{wildcards.name}.txt) xXxXx > output/cool_{wildcards.name}.txt"

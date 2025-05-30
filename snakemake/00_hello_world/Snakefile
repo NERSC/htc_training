@@ -1,0 +1,6 @@
+rule all:
+    input: "hello_world.txt"
+
+rule hello_world:
+    output: "hello_world.txt"
+    shell: "echo Hello World! > hello_world.txt"

@@ -33,8 +33,8 @@ with support for the PostgreSQL database backend:
 uv tool install 'hypershell[postgres]' --python 3.13
 ```
 
-As your HPC center admin to create a module if not already available.
-There as some special considerations more easily deployed for users as a system tool.
+Ask your HPC center admins to create a module if not already available.
+There are some special considerations more easily deployed for users as a system tool.
 
 
 ## Online

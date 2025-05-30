@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo This is payload script of hypothetical MPI application number $1  MPI proc number: $SLURM_PROCID  Host: $(hostname)
+H="$(hostname)"
+echo This is the payload script. $1 is the argument passed to it. Ran on machine $H.

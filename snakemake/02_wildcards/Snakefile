@@ -1,0 +1,11 @@
+from pathlib import Path
+name_list = Path("data").iterdir()
+name_list = [file.with_suffix("").name for file in name_list]
+
+rule all:
+    input: expand("output/cool_{name}.txt", name=name_list)
+
+rule make_cool:
+    input: "data/{name}.txt"
+    output: "output/cool_{name}.txt"
+    shell: "echo xXxXx $(cat data/{wildcards.name}.txt) xXxXx > output/cool_{wildcards.name}.txt"
